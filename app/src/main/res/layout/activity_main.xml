@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alumnomy.myapplication.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <EditText
+        android:id="@+id/n1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/ingresa_otro_numero"
+        android:inputType="numberDecimal"
+        tools:ignore="RtlHardcoded"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/Mayor"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="84dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/n2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/ingresa_un_numero"
+        android:inputType="numberDecimal"
+        tools:ignore="MissingConstraints"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/n1"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintLeft_toLeftOf="@+id/n1" />
+
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="348dp"
+        android:layout_height="60dp"
+        android:text="@string/textview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="98dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/n2"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="29dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-43dp"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.506" />
+
+    <Button
+        android:id="@+id/Restar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="restar"
+        android:text="Restar"
+        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/Multiplicar"
+        app:layout_constraintRight_toRightOf="@+id/Menor"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintLeft_toLeftOf="@+id/Menor" />
+
+    <Button
+        android:id="@+id/Sumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sumar"
+        android:text="Sumar"
+        tools:ignore="HardcodedText,RtlHardcoded"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/Mayor"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Restar"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/Mayor" />
+
+    <Button
+        android:id="@+id/Multiplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:elevation="0dp"
+        android:onClick="multiplicar"
+        android:text="Multiplicar"
+        tools:ignore="HardcodedText"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/Restar"
+        android:layout_marginBottom="30dp" />
+
+    <Button
+        android:id="@+id/Mayor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="mayor"
+        android:text="Mayor"
+        android:layout_marginStart="13dp"
+        tools:ignore="HardcodedText,RtlHardcoded"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/Sumar"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="@+id/n1" />
+
+    <Button
+        android:id="@+id/Menor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:onClick="menor"
+        android:text="Menor"
+        tools:ignore="HardcodedText,RtlHardcoded"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/Restar"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/Mayor" />
+
+</android.support.constraint.ConstraintLayout>
